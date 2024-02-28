@@ -1,0 +1,17 @@
+<h1>First view</h1>
+<p>Now is <%= Time.now %></p>
+
+<h2>Meet our team</h2>
+<% @members.each do |member| %>
+  <div>
+  <h3><%= member %></h3>
+  </div>
+<% end %>
+
+<input type="text"
+name="member"
+value="<%= params[:member] %>"
+placeholder="Who are you looking for?"
+>
+
+<%= link_to "Go back to home", home_path %>
